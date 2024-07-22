@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <div class="container-fluid mt-3">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <h5>태그사이에 변수값을 출력하는 방법</h5>
+                <p>수1: <span th:text="${number1}"></span> </p>
+                <p>수1: <span th:text="${number2}"></span> </p>
+                <p>합계: <span th:text="${sum}"></span> </p>
+
+                <form>
+                    <h5>input 태그에 value 값에 출력하는 방법</h5>
+                    <label class="form-label">수1:</label>
+                    <input type="number" class="form-control" name="number1"
+                        th:value="${number1}">
+                    <label class="form-label">수2:</label>
+                    <input type="number" class="form-control" name="number2"
+                           th:value="${number2}">
+                    <label class="form-label">합계::</label>
+                    <input type="number" class="form-control" name="sum"
+                           th:value="${sum}">
+                </form>
+
+                <h5>원하는 곳에 직접 값을 출력하는 방법</h5>
+                <p>수1 : [[${number1}]]</p>
+                <p>수1 : [[${number2}]]</p>
+                <p>수1 : [[${sum}]]</p>
+
+                <a th:href="@{/calculate2}">입력페이지로 이동</a>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+</body>
+</html>

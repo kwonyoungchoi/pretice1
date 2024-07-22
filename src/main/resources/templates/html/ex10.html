@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>영역을 나눈 페이지 예시</title>
+    <style>
+        header{
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align:center;
+        }
+        nav {
+            background-color: #f2f2f2;
+            padding: 10px;
+        }
+        main {
+            display: flex;
+            justify-content: space-between;
+        }
+        section, aside {
+            width: 48%;
+            padding: 10px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>헤더</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#section1">섹션 1</a> </li>
+            <li><a href="#section2">섹션 2</a> </li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="section1">
+            <h2>섹션 1</h2>
+            <p>이곳은 첫 번째 섹션입니다.</p>
+        </section>
+
+        <aside>
+            <h2>사이드바</h2>
+            <p>부가적인 정보를 담은 영역입니다.</p>
+        </aside>
+    </main>
+
+    <footer>
+        <p>푸터</p>
+    </footer>
+</body>
+</html>
